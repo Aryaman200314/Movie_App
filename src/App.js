@@ -25,16 +25,28 @@ export default function App() {
 
   const handleSearch = async(query)=>
   {
+    if (query.trim() === '') {
+      alert('Search is empty');
+    }
+    else
+    {
     try{
       const response = await fetch(`https://api.themoviedb.org/3/search/movie?query=${query}&api_key=f531333d637d0c44abc85b3e74db2186&include_adult=false&language=en-US&page=1`)
       const result = await response.json()
+      if(result.results.length===0)
+      {alert("No movie found") }
+      else
+      {
       setMovies(result.results)
+      }
     }
     catch (error)
     {
-      console.log(error)
+      alert("error code:",error)
+      console.log("Error code:",error)
     }
   }
+}
 
  useEffect(()=>
  {
@@ -46,7 +58,7 @@ export default function App() {
   
      
       <BrowserRouter>
-      <Navbar/>
+      <Navbar onSearch={handleSearch}/>
       <Routes>
       <Route path='/' element={<div><Movieslist movies={movies} /></div>}/>
       </Routes>

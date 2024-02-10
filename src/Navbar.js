@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-export default function Navbar() {
+export default function Navbar({onSearch}) {
+    const [search, setSearch] = useState('');
   return (
     <>
     
@@ -32,8 +33,9 @@ export default function Navbar() {
         
     </div>
     <div className='search-btn'>
-        <input type='text' placeholder='Search for movie'></input>
-        <button>Submit</button>
+        <input type='text' placeholder='Search for movie' onChange={(e)=>setSearch(e.target.value)}></input>
+        <button onClick ={()=>onSearch(search)}>Submit</button>
+        
     </div>
 
     </>

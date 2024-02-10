@@ -21,7 +21,7 @@ export default function MovieCards({ movie }) {
         <h2>{title}</h2>
 
         <img src={`https://image.tmdb.org/t/p/original/${poster_path}`}
-          alt='title' />
+          alt='No image available' />
         <section>
           <div className='vote'>
             <p>Votes: {vote_count}</p>
