@@ -104,3 +104,37 @@
     font-weight: bolder;
     border: 1px solid white;
 }
+.menu
+{
+    position: absolute;
+    display: grid;
+    flex-direction: column;
+    float: left;
+    padding-left: 25px;
+    z-index: 1000;
+    
+}
+.hamburger-menu
+{
+    font-size: 30px;
+    padding-left: 20px;
+    width: 30px;
+    
+}
+.buttons
+{
+    margin-bottom: 14px;
+    font-size: 20px;
+    width: 210px;
+    height: 73px;
+    border-radius: 20px;
+}
+.buttons1
+{
+    margin-top: 25px;
+    margin-bottom:  14px;
+    font-size: 20px;
+    width: 210px;
+    height: 73px;
+    border-radius: 20px;
+}
