@@ -33,13 +33,17 @@ export default function App() {
     try{
       const response = await fetch(`https://api.themoviedb.org/3/search/movie?query=${query}&api_key=f531333d637d0c44abc85b3e74db2186&include_adult=false&language=en-US&page=1`)
       const result = await response.json()
-      if(result.results.length===0)
-      {alert("No movie found") }
-      else
-      {
-      setMovies(result.results)
-      }
+      setMovies(result.result);
     }
+    //   if(result.results.length===0)
+    //   {alert("no movies found!")
+    //     cont flag = 
+    //   }
+    //   else
+    //   {
+    //   setMovies(result.results)
+    //   }
+    // }
     catch (error)
     {
       alert("error code:",error)
@@ -53,7 +57,7 @@ export default function App() {
   fetchmovies(currentPage)
  },[currentPage])
   return (
-    <div>
+    <div className='main'>
     
   
      

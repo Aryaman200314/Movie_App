@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import MovieCards from './MovieCards';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes, faSadCry } from '@fortawesome/free-solid-svg-icons';
 
 export default function Movieslist({ movies }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,9 +29,14 @@ export default function Movieslist({ movies }) {
 
       <div>
         <ul className='movies-list'>
-          {movies.map((movie) => (
+          {movies?.length > 0 ?
+          (movies.map((movie) => (
             <MovieCards key={movie.id} movie={movie} />
-          ))}
+          ))) : (<div className='not-found'>
+            <h1>No movies found </h1>
+           <i> <FontAwesomeIcon icon="fa-solid fa-face-frown" /> </i>
+          </div>)
+        }
         </ul>
       </div>
     </>

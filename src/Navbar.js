@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 export default function Navbar({onSearch}) {
     const [search, setSearch] = useState('');
   return (
@@ -34,7 +35,7 @@ export default function Navbar({onSearch}) {
     </div>
     <div className='search-btn'>
         <input type='text' placeholder='Search for movie' onChange={(e)=>setSearch(e.target.value)}></input>
-        <button onClick ={()=>onSearch(search)}>Submit</button>
+        <button onClick ={()=>onSearch(search)}><FontAwesomeIcon icon={faSearch}/></button>
         
     </div>
 

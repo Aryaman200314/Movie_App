@@ -14,7 +14,7 @@ export default function MovieCards({ movie }) {
     setIsLiked((prev)=>!prev)
   }
   const { id, poster_path, title, vote_count, vote_average, release_date } = movie;
-  console.log(id)
+  
   return (
     <div className='card'>
       <li>
