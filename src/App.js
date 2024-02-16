@@ -3,6 +3,10 @@ import Movieslist from './Movieslist';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar';
 import './App.css';
+import Home from './Home';
+import Tvlist from './Tvlist';
+import Favmovies from './Favmovies';
+import Favtv from './Favtv';
 export default function App() {
   const [movies, setMovies] = useState([]);
   const [totalPages, settotalPages] = useState(0)
@@ -64,7 +68,11 @@ export default function App() {
       <BrowserRouter>
       <Navbar onSearch={handleSearch}/>
       <Routes>
-      <Route path='/' element={<div><Movieslist movies={movies} /></div>}/>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/movies' element={<div><Movieslist movies={movies} /></div>}/>
+      <Route path ='/tv' element={<div><Tvlist></Tvlist></div>}/>
+      <Route path = '/favmovies' element={<div><Favmovies></Favmovies></div>}/>
+      <Route path='/favtv' element={<div><Favtv></Favtv></div>}/>
       </Routes>
       </BrowserRouter>
     </div>

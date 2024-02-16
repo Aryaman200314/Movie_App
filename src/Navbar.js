@@ -15,19 +15,19 @@ export default function Navbar({onSearch}) {
             </li>
 
             <li>
-                <Link to='Movie'>Movie</Link>
+                <Link to='/movies'>Movie</Link>
             </li>
 
             <li>
-                <Link to='TV'>TV Shows</Link>
+                <Link to='/tV'>TV Shows</Link>
             </li>
 
             <li>
-                <Link to='Favmovies'>My movies </Link>
+                <Link to='/favmovies'>My movies </Link>
             </li>
 
             <li>
-                <Link to='Favtv'>My TV Shows</Link>
+                <Link to='/favtv'>My TV Shows</Link>
             </li>
             
         </ul>
