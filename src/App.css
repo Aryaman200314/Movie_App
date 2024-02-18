@@ -1,5 +1,24 @@
-.main
+.main-page
 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.home
+{
+    display: grid;
+    grid-template-columns:  1fr 1fr; 
+    align-items: center;
+    gap: 100px;
+    padding: 100px;
+}
+.home button
+{
+    height: 300px;
+    font-size: 100px;
+    border-radius: 40px;
+    font-weight: bolder;
+    cursor: pointer;
     
 }
 .navbar

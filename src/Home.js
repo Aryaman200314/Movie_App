@@ -5,7 +5,7 @@ export default function Home() {
     const navigate = useNavigate()
   return (
 
-    <div>
+    <div className='home'>
         <button onClick={()=>navigate("/movies")}>Movies</button>
         <button onClick={()=>navigate("/tv")}>TV Shows</button>
     </div>
