@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import MovieCards from './MovieCards';
+import Navbar from './Navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faSadCry } from '@fortawesome/free-solid-svg-icons';
 
@@ -38,6 +39,10 @@ export default function Movieslist({ movies }) {
     setMenuOpen(!menuOpen);
   };
 
+  //////////////
+
+
+  
   return (
     <>
       <div className='hamburger-menu' onClick={toggleMenu}>
@@ -56,6 +61,7 @@ export default function Movieslist({ movies }) {
       ) : null}
 
       <div>
+     
         <ul className='movies-list'>
           {movies?.length > 0 ?
           (sortedMovies.map((movie) => (

@@ -4,35 +4,75 @@
     text-align: center;
     align-items: center;
 }
+.home-h1{
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+}
 .home
 {
     display: grid;
-    grid-template-columns:  1fr 1fr; 
     align-items: center;
-    gap: 100px;
-    padding: 100px;
+    gap: 20px;
+    
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 40px;
+}
+
+.water-mark
+{
+    text-align: center;
+    
 }
 .home button
 {
-    height: 300px;
-    font-size: 100px;
+    height: 225px;
+    font-size: 90px;
     border-radius: 40px;
     font-weight: bolder;
     cursor: pointer;
-    
+    transition: transform 0.2s;
 }
+.home button:hover
+{
+    transform: scale(1.1);
+    background-color: black;
+    color: white;
+}
+.mode-btn {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    float: right;
+    display: flex;
+    cursor: pointer;
+    padding-right: 10px;
+    color: #333; 
+    transition: color 0.3s, background-color 0.3s;
+}
+/* .mode-btn:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+body.dark-theme .mode-btn {
+    color: #fff; /* Color for dark theme */
+/* } */
+
+
 .navbar
 {
     display: flex;
     justify-content: space-around;
     background-color: pink;
     align-items: center;
+   
 }
+
 .navbar-links
 {
     display: flex;
     justify-content: space-around;
-    width: 480px;
+    width: 510px;
+    gap: 8px;
 }
 .navbar-links li
 {
@@ -51,6 +91,12 @@
     color: darkblue;
     font-size: 19px;
     text-decoration: none;
+}
+
+.navbar-links li a.active {
+    font-weight: bold;
+    border-bottom: 2px solid white;
+
 }
 .movies-list
 {
