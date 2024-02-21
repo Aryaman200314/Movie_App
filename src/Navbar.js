@@ -8,11 +8,11 @@ export default function Navbar({ onSearch }) {
 
     return (
         <>
-            <style>
-                @import url('https://fonts.googleapis.com/css2?family=Barrio&display=swap')
-            </style>
+                   <style>
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap')
+</style>
             <div className='navbar'>
-                <h2>Aryaman Movie <FontAwesomeIcon icon={faFaceSmile}/></h2>
+                <h2>Aryaman's Movie DB <FontAwesomeIcon className='icon' icon={faFaceSmile}/></h2>
                 <ul className='navbar-links'>
                     <li>
                         <NavLink to='/' activeClassName='active'>Home</NavLink>

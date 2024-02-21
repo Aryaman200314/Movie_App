@@ -4,9 +4,10 @@
 //this file is the child of MivoeList
 
 // we will drectally fetch the data from app.js so that if i want to use that data somewhere else i can use it.
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { json } from 'react-router-dom';
 export default function MovieCards({ movie }) {
   //state to handle the heart icon to save the movies
   const  [isLiked, setIsLiked] = useState(false);
@@ -14,7 +15,23 @@ export default function MovieCards({ movie }) {
     setIsLiked((prev)=>!prev)
   }
   const { id, poster_path, title, vote_count, vote_average, release_date } = movie;
-  
+  const [favMovies, setfavMovies] = useState(
+    JSON.parse(
+      localStorage.getItem('favoriteMvoies'))?.some(([_,movieId])=>movieId === id) || false
+  )
+  useEffect(()=>
+  {
+    const favMovies = JSON.parse(localStorage.getItem('favoriteMvoies')) || []
+    if(isLiked){
+      localStorage.setItem('favoriteMvoies',JSON.stringify([...favMovies,{id, title}]))
+    }
+    else
+    {
+      localStorage.getItem('favoriteMvoies',
+      JSON.stringify(favMovies.filter(([title,movieId])=>movieId !== id ))
+      )
+    }
+  },[isLiked,title,id])
   return (
     <div className='card'>
       <li>

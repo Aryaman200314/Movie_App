@@ -60,7 +60,7 @@ export default function Movieslist({ movies }) {
         </div>
       ) : null}
 
-      <div>
+      <div className='movies-list-container'>
      
         <ul className='movies-list'>
           {movies?.length > 0 ?
