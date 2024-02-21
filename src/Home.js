@@ -32,7 +32,7 @@ export default function Home() {
                 <button onClick={() => navigate("/movies")}>Movies</button>
                 <button onClick={() => navigate("/tv")}>TV Shows</button>
             </div>
-            <h3 className='water-mark'>Made with <FaHeart className='heart-active' /> by<a href='https://aryaman.bio.link/' target='_blank'> Aryaman</a></h3>
+            <h3 className='water-mark'>Made by<a href='https://aryaman.bio.link/' target='_blank'> Aryaman</a></h3>
             
             <div className='links'> 
             <a href='https://www.linkedin.com/in/aryaman-sharma-07a233233/' target='_blank'><FaLinkedin/></a>
