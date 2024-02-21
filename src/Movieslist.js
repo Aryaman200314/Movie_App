@@ -33,7 +33,8 @@ export default function Movieslist({ movies }) {
     {
       return movies.sort((a, b) => new Date(b.release_date) - new Date(a.release_date));
     }
-  })
+    return 0;
+  });
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
